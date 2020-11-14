@@ -15,6 +15,5 @@ Renter.associate = function (models) {
       onDelete:"cascade"
    });
 };
-
 return Renter;
 };

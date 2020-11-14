@@ -10,9 +10,13 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.TEXT,
         allowNull: false,
         isEmail: true,
-        unique: true},  
+        unique: true}, 
     spaceType: {
         type: DataTypes.TEXT}, 
+    zipCode: {
+        type: DataTypes.INTEGER,
+        isNumeric: true,
+        allowNull: false},
     length: {
         type: DataTypes.INTEGER,
         isNumeric: true,
