@@ -1,7 +1,6 @@
 {
   "development": {
     "username": "root",
-    "password": "Apple@1324",
     "database": "test_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
