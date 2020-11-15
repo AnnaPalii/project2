@@ -1,14 +1,9 @@
-const { SELECT } = require("sequelize/types/lib/query-types");
-const { INTEGER } = require("sequelize/types");
-
 module.exports = function(sequelize, DataTypes) {
     const Host = sequelize.define("Host", {
     name: {
-        type: DataTypes.TEXT,
-        allowNull: false}, 
+        type: DataTypes.TEXT}, 
     email:{
-        type: DataTypes.TEXT,
-        allowNull: false,
+        type: DataTypes.STRING(155),
         isEmail: true,
         unique: true}, 
     spaceType: {
@@ -36,5 +31,10 @@ module.exports = function(sequelize, DataTypes) {
     }, 
 });
 
+Host.associate = function(models) {
+    // We're saying that a Host should belong to many
+    // A Object can't be created without an Author due to the foreign key constraint
+    Host.belongsToMany(Renter, { through: 'Object' });
+};
 return Host;
 };
