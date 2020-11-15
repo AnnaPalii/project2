@@ -7,7 +7,9 @@ router.get("/", (req, res) => {
    // get comments from db and send to template
    db.Test.findAll({})
       .then((comments) => {
-         res.render("index", {
+         res.render("index", 
+      // looking for index.handlebars 
+         {
             comments: comments,
             helpers: {
                getFirst: function(obj, col) {
