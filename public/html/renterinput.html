@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Spaceall</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light border-bottom border-info sticky-top" id="navbar">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/spaceall3.JPG" id="logo" width="70" height="50" class="d-inline-block align-top"
+                alt="Spaceall logo" loading="lazy">
+        </a>
+
+        <ul class="nav navbar-nav navbar-right ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fa fa-user-circle mr-1" aria-hidden="true"></i>
+                    Main</a>
+
+            </li>
+
+        </ul>
+
+
+    </nav>
+
+    <br>
+
+    <h1>Renter Profile</h1>
+    <div class="host">
+        <form class="col-lg-12">
+            <div class="fourm-group">
+                <label for="exampleFirstName">Full Name</label>
+                <input type="text" class="form-control" id="renterName" placeholder="Full name">
+            </div>
+
+
+         
+            <div class="form-group">
+                <label for="inputAddress">Dimensions</label>
+                <input type="text" class="form-control" id="renterSpace" placeholder="LxHxW">
+            </div>
+            <div class="form-group">
+                <input type="file" id="myFile" name="filename">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="renterZip">
+                </div>
+            </div>
+          
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Copyright 2020</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>
