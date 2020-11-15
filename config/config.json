@@ -1,18 +1,13 @@
 {
   "development": {
     "username": "root",
-    "password": "Apple@1324",
-    "database": "spaceall_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
     "database": "test_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Apple@1324",
-    "database": "database_test",
+    "database": "test_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -23,5 +18,4 @@
       "charset": "utf8" 
    } 
   }
-  }
-
+}
