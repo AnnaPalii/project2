@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
 Host.associate = function(models) {
     // We're saying that a Host should belong to many
     // A Object can't be created without an Author due to the foreign key constraint
-    Host.belongsToMany(Renter, { through: 'Object' });
+    Host.belongsToMany(models.Renter, { through: 'Object' });
 };
 return Host;
 };
