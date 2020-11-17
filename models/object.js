@@ -1,9 +1,16 @@
-const { SELECT } = require("sequelize/types/lib/query-types");
-const { INTEGER } = require("sequelize/types");
+const Renter = require("./renter.js");
+const Host = require("./host.js");
 
 module.exports = function(sequelize, DataTypes) {
     const Object = sequelize.define("Object", {
         //foreign key 
+    // RenterId: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //         model: Renter, 
+    //         key: 'id'
+    //     }
+    //     },
     name: {
         type: DataTypes.TEXT,
         allowNull: false}, 
@@ -23,17 +30,15 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.VIRTUAL,
         get() {return this.length * this.height * this.width;},
         set(value) {throw new Error('Do not try to set the volume value!');}
-    }, 
-});
-
-Post.associate = function(models) {
-    // We're saying that a Object should belong to an Author
-    // A Object can't be created without an Author due to the foreign key constraint
-    Object.belongsTo(models.Renters, {
-    foreignKey: {
-        allowNull: false
     }
-    });
-};
+//     HostId: {
+//     type: DataTypes.INTEGER,
+//     references: {
+//         model: Host, 
+//         key: 'id'
+//     },
+//     constraints:false
+// },
+});
 return Object;
 };
