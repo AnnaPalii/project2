@@ -8,7 +8,9 @@ router.get("/", (req, res) => {
    res.redirect('html/main.html');
 });
 
-// comments page
-// router.use("./public/html/main.html", mainRoute);
+// renter page
+router.get("/html/renterinput.html", (req, res) => {
+   res.redirect('html/renterinput.htmll');
+});
 
 module.exports = router;
