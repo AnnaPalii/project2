@@ -1,0 +1,14 @@
+{
+  "development": {
+    "username": "root",
+<<<<<<< HEAD
+    "password": "TanLaB120398!",
+    "database": "test_db",
+=======
+    "password": "TanLab",
+    "database": "spaceall_db",
+>>>>>>> e3f9aab4b30d71b0b637257b6cfcb98e2f914973
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

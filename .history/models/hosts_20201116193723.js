@@ -1,19 +1,22 @@
-const Renter = require("./renter.js");
-const Host = require("./host.js");
+const { SELECT } = require("sequelize/types/lib/query-types");
+const { INTEGER } = require("sequelize/types");
 
 module.exports = function(sequelize, DataTypes) {
-    const Object = sequelize.define("Object", {
-        //foreign key 
-    // RenterId: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //         model: Renter, 
-    //         key: 'id'
-    //     }
-    //     },
+    const Host = sequelize.define("Host", {
     name: {
         type: DataTypes.TEXT,
         allowNull: false}, 
+    email:{
+        type: DataTypes.TEXT,
+        allowNull: false,
+        isEmail: true,
+        unique: true}, 
+    spaceType: {
+        type: DataTypes.TEXT}, 
+    zipCode: {
+        type: DataTypes.INTEGER,
+        isNumeric: true,
+        allowNull: false},
     length: {
         type: DataTypes.INTEGER,
         isNumeric: true,
@@ -30,15 +33,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.VIRTUAL,
         get() {return this.length * this.height * this.width;},
         set(value) {throw new Error('Do not try to set the volume value!');}
-    }
-//     HostId: {
-//     type: DataTypes.INTEGER,
-//     references: {
-//         model: Host, 
-//         key: 'id'
-//     },
-//     constraints:false
-// },
+    }, 
 });
-return Object;
+
+return Host;
 };
