@@ -4,6 +4,9 @@ const db = require("../../models");
 
 console.log("renter");
 // post comment route -> back to index
+
+// "/api/renter/create"
+
 router.post("/create", (req, res, next) => {
    console.log("renter create");
    console.log(req);

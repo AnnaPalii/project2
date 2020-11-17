@@ -5,7 +5,7 @@
     "password": "Apple@1324",
 
 
-    "database": "test_db",
+    "database": "spaceall_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

@@ -5,7 +5,7 @@ var path = require('path');
 
 // get route -> index
 router.get("/", (req, res) => {
-   res.sendFile(path.join(__dirname + '/main.html'));
+   res.redirect('html/main.html');
 });
 
 // comments page
