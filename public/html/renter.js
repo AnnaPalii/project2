@@ -3,7 +3,7 @@ $(document).ready(function () {
   // Getting jQuery references to the renter body, title, form, and category select
   var renterName = $("#renterName");
   var dimensionInput = $("#renterSpace");
-  var myFile = $("#myImg");
+  // var myFile = $("#myImg");
   var renterZipCode = $("#renterZip");
   // Giving the renterCategorySelect a default value
   // renterCategorySelect.val("Personal");
@@ -11,7 +11,7 @@ $(document).ready(function () {
   $(renterForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the renter if we are missing a body or a title
-    if (!renterName.val().trim() || !dimensionInput.val().trim() || myFile.val().trim() || !renterZipCode.val().trim()) {
+    if (!renterName.val().trim() || !dimensionInput.val().trim() || !renterZipCode.val().trim()) {
       return;
     }
     // Constructing a newRenter object to hand to the database
@@ -19,7 +19,7 @@ $(document).ready(function () {
       renterfullname: renterName.val().trim(),
       dimensions: dimensionInput.val().trim(),
       inputzip: renterZipCode.val(),
-      file: myFile.val()
+      // file: myFile.val()
     };
 
     console.log(newRenter);
