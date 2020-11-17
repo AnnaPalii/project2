@@ -34,9 +34,11 @@ module.exports = function(sequelize, DataTypes) {
     HostId: {
     type: DataTypes.INTEGER,
     references: {
-    model: Host, 
-    key: 'id'
-    } },
+        model: Host, 
+        key: 'id'
+    },
+    allowNull:true
+},
 });
 return Object;
 };
