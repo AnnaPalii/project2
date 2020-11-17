@@ -4,13 +4,13 @@ const Host = require("./host.js");
 module.exports = function(sequelize, DataTypes) {
     const Object = sequelize.define("Object", {
         //foreign key 
-    RenterId: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: Renter, 
-            key: 'id'
-        }
-        },
+    // RenterId: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //         model: Renter, 
+    //         key: 'id'
+    //     }
+    //     },
     name: {
         type: DataTypes.TEXT,
         allowNull: false}, 
@@ -30,15 +30,15 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.VIRTUAL,
         get() {return this.length * this.height * this.width;},
         set(value) {throw new Error('Do not try to set the volume value!');}
-    },
-    HostId: {
-    type: DataTypes.INTEGER,
-    references: {
-        model: Host, 
-        key: 'id'
-    },
-    allowNull:true
-},
+    }
+//     HostId: {
+//     type: DataTypes.INTEGER,
+//     references: {
+//         model: Host, 
+//         key: 'id'
+//     },
+//     constraints:false
+// },
 });
 return Object;
 };
