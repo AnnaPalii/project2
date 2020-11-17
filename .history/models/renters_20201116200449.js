@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
    });
 
 Renter.associate = function (models) {
-   Renter.hasMany (models.Object , {
+   Renter.hasMany (models.Objects , {
       onDelete:"cascade"
    });
 };

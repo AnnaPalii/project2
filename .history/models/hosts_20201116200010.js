@@ -1,9 +1,20 @@
+
 module.exports = function(sequelize, DataTypes) {
-    const Object = sequelize.define("Object", {
-        //foreign key 
+    const Host = sequelize.define("Host", {
     name: {
         type: DataTypes.TEXT,
         allowNull: false}, 
+    email:{
+        type: DataTypes.TEXT,
+        allowNull: false,
+        isEmail: true,
+        unique: true}, 
+    spaceType: {
+        type: DataTypes.TEXT}, 
+    zipCode: {
+        type: DataTypes.INTEGER,
+        isNumeric: true,
+        allowNull: false},
     length: {
         type: DataTypes.INTEGER,
         isNumeric: true,
@@ -23,14 +34,5 @@ module.exports = function(sequelize, DataTypes) {
     }, 
 });
 
-Object.associate = function(models) {
-    // We're saying that a Object should belong to an Author
-    // A Object can't be created without an Author due to the foreign key constraint
-    Object.belongsTo(models.Renter, {
-    foreignKey: {
-        allowNull: false
-    }
-    });
-};
-return Object;
+return Host;
 };
