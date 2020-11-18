@@ -13,8 +13,8 @@ router.post("/create", (req, res, next) => {
    
    db.Renter.create(req.body)
       .then(newRenter => {
-         console.log("[node] new renter:", newRenter.renter);
-         res.redirect("/");
+         console.log("[node] new renter:", newRenter.dataValues);
+         res.redirect("/html/object.html?rntr=" + newRenter.id);
       })
       .catch(err => {
          res.status(500);

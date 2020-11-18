@@ -2,7 +2,7 @@ const Renter = require("./renter.js");
 const Host = require("./host.js");
 
 module.exports = function(sequelize, DataTypes) {
-    const Object = sequelize.define("Object", {
+    const StoreObject = sequelize.define("StoreObject", {
         //foreign key 
     // RenterId: {
     //     type: DataTypes.INTEGER,
@@ -11,6 +11,24 @@ module.exports = function(sequelize, DataTypes) {
     //         key: 'id'
     //     }
     //     },
+   
+    RenterId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Renters",
+        key: 'id',
+        allowNull: false
+      }
+    },
+   
+    HostId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Hosts",
+        key: 'id',
+        allowNull: true
+      }
+    },
     name: {
         type: DataTypes.TEXT,
         allowNull: false}, 
@@ -31,14 +49,7 @@ module.exports = function(sequelize, DataTypes) {
         get() {return this.length * this.height * this.width;},
         set(value) {throw new Error('Do not try to set the volume value!');}
     }
-//     HostId: {
-//     type: DataTypes.INTEGER,
-//     references: {
-//         model: Host, 
-//         key: 'id'
-//     },
-//     constraints:false
-// },
+
 });
-return Object;
+return StoreObject;
 };

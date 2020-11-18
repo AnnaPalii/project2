@@ -40,29 +40,29 @@
  
 
     <div>
-        <form target="_blank" class="col-lg-12" id="renterForm" action = "/api/object/create" method="POST">
+        <form target="_blank" class="col-lg-12" id="renterForm" >
             <div class="fourm-group">
                 <label for="objectName">Object Name</label>
-                <input type="text" class="form-control" id="objectName" placeholder="Object name" name="name">
+                <input type="text" class="form-control" id="objectName" placeholder="Object name" name="name"/>
             </div>
 
 
             <div class="form-group col-md-2">
                 <label for="inputLength">Length</label>
-                <input type="text" class="form-control" id="inputLength" name ="length">
+                <input type="text" class="form-control" id="inputLength" name ="length"/>
             </div>
 
             <div class="form-group col-md-2">
                 <label for="inputWidth">Width</label>
-                <input type="text" class="form-control" id="inputWidth" name ="width">
+                <input type="text" class="form-control" id="inputWidth" name ="width"/>
             </div>
 
             <div class="form-group col-md-2">
                 <label for="inputHeight">Height</label>
-                <input type="text" class="form-control" id="inputHeight" name ="height">
+                <input type="text" class="form-control" id="inputHeight" name ="height"/>
             </div>
 
-            <button type="submit" class="btn btn-primary"onclick="window.location.href= 'results.html';">Submit</button>
+            <button type="submit" class="submit-object btn btn-primary" >Submit</button>
         </form>
 
     </div>
@@ -76,6 +76,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="postObject.js"></script>
 </body>
 
 </html>

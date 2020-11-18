@@ -4,9 +4,10 @@ const db = require("../../models");
 
 // post comment route -> back to index
 router.post("/create", (req, res, next) => {
-   db.Object.create(req.body)
+   console.log(req.body)
+   db.StoreObject.create(req.body)
       .then(newObject => {
-         console.log("[node] new object:", newObject.object);
+         // console.log("[node] new object:", newObject.object);
          res.redirect("/");
       })
       .catch(err => {
