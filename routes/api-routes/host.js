@@ -4,6 +4,7 @@ const db = require("../../models");
 
 // post comment route -> back to index
 router.post("/create", (req, res, next) => {
+   console.log('host')
    db.Host.create(req.body)
       .then(newHost => {
          console.log("[node] new host:", newHost.host);
