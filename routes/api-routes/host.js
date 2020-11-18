@@ -7,7 +7,7 @@ router.post("/create", (req, res, next) => {
    db.Host.create(req.body)
       .then(newHost => {
          console.log("[node] new host:", newHost.host);
-         res.redirect("/");
+         res.redirect("/providerlastpage.html");
       })
       .catch(err => {
          res.status(500);

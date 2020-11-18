@@ -8,7 +8,7 @@ router.post("/create", (req, res, next) => {
       console.log(req);
       db.Renter.create(req.body)
       .then(newRenter => {
-         console.log("[node] new renter:", newRenter.renter);
+         console.log("[node] new renter:", newRenter);
          res.redirect("/object.html");
       })
       .catch(err => {
