@@ -1,4 +1,3 @@
-
 module.exports = function(table) {
    if (process.env !== "production") {
       console.log("\n🚀 init table seed Host");
@@ -20,4 +19,3 @@ module.exports = function(table) {
 //    }
 //    return Promise.resolve();
 // };
-

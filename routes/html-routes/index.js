@@ -10,7 +10,18 @@ router.get("/", (req, res) => {
 
 // renter page
 router.get("/html/renterinput.html", (req, res) => {
-   res.redirect('html/renterinput.htmll');
+   res.redirect('html/renterinput.html');
 });
 
+router.get("/object.html", (req, res) => {
+   res.sendFile(path.join(__dirname, "../../public/html/object.html"));
+});
+
+router.get("/results.html", (req, res) => {
+   res.sendFile(path.join(__dirname, "../../public/html/results.html"));
+});
+
+router.get("/providerlastpage.html", (req, res) => {
+   res.sendFile(path.join(__dirname, "../../public/html/providerlastpage.html"));
+});
 module.exports = router;
