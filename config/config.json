@@ -1,19 +1,16 @@
 {
   "development": {
-    "username": "root",
-
-    "password": "Love1993you",
-
-
-    "database": "spaceall_db",
-    "host": "127.0.0.1",
+    "username": "e3fsj0efuq3ek1t5",
+    "password": "nm27avbpdgxujp3s",
+    "database": "uux8x48n59z2jw4e",
+    "host": "j1r4n2ztuwm0bhh5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql",
     "dialectOptions": { 
-       "charset": "utf8" 
+    "charset": "utf8" 
     } 
    }
 }
