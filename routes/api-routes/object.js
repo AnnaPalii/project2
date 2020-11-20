@@ -4,12 +4,11 @@ const db = require("../../models");
 
 // post comment route -> back to index
 router.post("/create", (req, res, next) => {
-   req.body.HostId = 1
-   req.body.RenterId = 1
+   console.log("Object request!")
    db.Object.create(req.body)
       .then(newObject => {
          console.log("[node] new object:", newObject.object);
-         res.redirect("/results.html");
+         res.json(newObject);
       })
       .catch(err => {
          res.status(500);

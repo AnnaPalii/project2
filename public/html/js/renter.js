@@ -21,11 +21,8 @@ $(document).ready(function () {
       inputzip: renterZipCode.val(),
       // file: myFile.val()
     };
-
     console.log(newRenter);
-
     submitForm(newRenter);
-
   });
 
   // Submits a new renter and brings user to blog page upon completion

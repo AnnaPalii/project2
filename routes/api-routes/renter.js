@@ -9,7 +9,7 @@ router.post("/create", (req, res, next) => {
       db.Renter.create(req.body)
       .then(newRenter => {
          console.log("[node] new renter:", newRenter);
-         res.redirect("/object.html");
+         res.json(newRenter);
       })
       .catch(err => {
          res.status(500);

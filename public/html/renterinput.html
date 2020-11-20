@@ -4,63 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Spaceall</title>
-    <title>Document</title>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light border-bottom border-info sticky-top" id="navbar">
-        <a class="navbar-brand" href="#">
-            <img src="../assets/spaceall3.JPG" id="logo" width="70" height="50" class="d-inline-block align-top"
-                alt="Spaceall logo" loading="lazy">
-        </a>
+<nav class="navbar navbar-light bg-light border-bottom border-info sticky-top" id="navbar">
+<a class="navbar-brand" href="#">
+    <img src="spaceall3.JPG" id="logo" width="70" height="50" class="d-inline-block align-top" alt="Spaceall logo" loading="lazy">
+</a>
 
-        <ul class="nav navbar-nav navbar-right ml-auto">
+<ul class="nav navbar-nav navbar-right ml-auto">
 
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fa fa-user-circle mr-1" aria-hidden="true"></i>
-                    Main</a>
+    <li class="nav-item">
+        <a class="nav-link" href="main.html">
+            <i class="fa fa-user-circle mr-1" aria-hidden="true"></i>
+            Main</a>
+    </li>
+</ul>
+</nav>
 
-            </li>
+<br>
 
-        </ul>
-
-
-    </nav>
-
-    <br>
-
-    <h1>Renter Profile</h1>
-    <div>
-        <form  class="col-lg-12" id="renterForm" action = "/api/renter/create" method="POST">
-            <div class="fourm-group">
-                <label for="renterfullName">Full Name</label>
-                <input type="text" class="form-control" id="renterName" placeholder="Full name" name="name">
-            </div>
+<h1>Renter Profile</h1>
+<div>
+<form  class="col-lg-12" id="renterForm" action = "/api/renter/create" method="POST">
+<div class="fourm-group">
+    <label for="renterfullName">Full Name</label>
+    <input type="text" class="form-control" id="renterName" placeholder="Full name" name="name">
+</div>
 
 
-            <div class="form-group col-md-2">
-                <label for="inputEmail">E-mail</label>
-                <input type="text" class="form-control" id="inputEmail" name ="email">
-            </div>
+<div class="form-group col-md-2">
+    <label for="inputEmail">E-mail</label>
+    <input type="text" class="form-control" id="inputEmail" name ="email">
+</div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
-    </div>
+</div>
 
-    
 
-    <!-- <footer>
-        <p>Copyright 2020</p>
-    </footer> -->
-<script src="js/renter.js" type="text/javascript"></script>
+
+<!-- <footer>
+    <p>Copyright 2020</p>
+</footer> -->
+<script src="js/renterinput.js" type="text/javascript"></script>
 </body>
 
 </html>
