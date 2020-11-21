@@ -4,20 +4,20 @@ const Host = require("./host.js");
 module.exports = function(sequelize, DataTypes) {
     const Object = sequelize.define("Object", {
     name: {
-        type: DataTypes.TEXT,
-        allowNull: false}, 
+        type: DataTypes.STRING,
+        description: DataTypes.TEXT}, 
     length: {
         type: DataTypes.INTEGER,
-        isNumeric: true,
-        allowNull: false}, 
+        isNumeric: true
+        }, 
     width:{
         type: DataTypes.INTEGER,
-        isNumeric: true,
-        allowNull: false}, 
+        isNumeric: true
+        }, 
     height:{
         type: DataTypes.INTEGER,
-        isNumeric: true,
-        allowNull: false}, 
+        isNumeric: true
+        }, 
     volume: {
         type: DataTypes.VIRTUAL,
         get() {return this.length * this.height * this.width;},

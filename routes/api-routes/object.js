@@ -16,19 +16,21 @@ const db = require("../../models");
 //       });
 // });
 router.post("/create", (req, res, next) => {
-   console.log(req.body);
+   req.body
    db.Object.create({
-      text: req.body.name,
-      number: req.body.length,
-      number: req.body.width,
-      number: req.body.height
+      name: req.body.name,
+      length: req.body.length,
+      width: req.body.width,
+      height: req.body.height,
+      RenterId: req.body.RenterId
    })
       .then(function () {
-         res.redirect("/result");
+         console.log("[node] new object:", req.body);
+         res.json(req.body);
       })
       .catch(err => {
          res.status(500);
-         next(err);
+         next(err.message);
       });
 });
 
