@@ -5,23 +5,23 @@ var path = require('path');
 
 // get route -> index
 router.get("/", (req, res) => {
-   res.redirect('html/main.html');
+   res.redirect('main.html');
 });
 
 // renter page
-router.get("/html/renterinput.html", (req, res) => {
-   res.redirect('html/renterinput.html');
+router.get("/renterinput.html", (req, res) => {
+   res.redirect('renterinput.html');
 });
 
 router.get("/object.html", (req, res) => {
-   res.sendFile(path.join(__dirname, "../../public/html/object.html"));
+   res.sendFile(path.join(__dirname, "../../public/object.html"));
 });
 
 router.get("/results.html", (req, res) => {
-   res.sendFile(path.join(__dirname, "../../public/html/results.html"));
+   res.sendFile(path.join(__dirname, "../../public/results.html"));
 });
 
 router.get("/providerlastpage.html", (req, res) => {
-   res.sendFile(path.join(__dirname, "../../public/html/providerlastpage.html"));
+   res.sendFile(path.join(__dirname, "../../public/providerlastpage.html"));
 });
 module.exports = router;
