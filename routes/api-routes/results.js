@@ -4,7 +4,7 @@ const db = require("../../models");
 
 router.get("/", function (req,res){
     db.Host.findAll().then(function(dbHost){
-        res.json(dbHost);
+    res.json(dbHost);
     });
 });
 

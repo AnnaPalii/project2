@@ -32,6 +32,26 @@ function getListings(host) {
   $.get("/api/results")
       .then((response) => {
           console.log(response);
+          $("#resultsContainer").empty();
+          for (i=0; i < response.length; i++){
+            console.log(i);
+            // if the data is not there, then return an error message
+            if (!response) {
+            $("#resultsContainer").append("<h2> There are no available storages at the moment. </h2>");
+            }
+            else {
+            var storageType =
+
+            $("#resultsContainer").append("<li><h3>Storage Type:" + response[i].spaceType + "</h3></li>");
+            $("#resultsContainer").append("<li><h3>ZipCode: " + response[i].zipCode + "</h3></li>");
+            $("#resultsContainer").append("<li><h3>Height: " + response[i].height + "</h3></li>");
+            $("#resultsContainer").append("<li><h3>Length: " + response[i].length + "</h3></li>");
+            $("#resultsContainer").append("<li><h3>Width: " + response[i].width + "</h3></li>");
+            $("#resultsContainer").append("<div><button>Contact Host</button></div>");
+            $("#resultsContainer").addClass("card");
+            }
+
+          }
       });
 }
 
