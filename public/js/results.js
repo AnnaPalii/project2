@@ -24,6 +24,15 @@ console.log("Result Java!")
 //     console.log("Listing " + title  + " created!");
 //   };
 // This function grabs posts from the database and updates the view
-function getListings(host) {
+$(document).ready(function() {
 
+  getListings();
+
+function getListings(host) {
+  $.get("/api/results")
+      .then((response) => {
+          console.log(response);
+      });
 }
+
+});

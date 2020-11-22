@@ -5,9 +5,32 @@ body {
 
   /* color: white; */
 }
-.fourm-group {
-
+nav{
+  text-align: center;
+  padding: 30px;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: 'Mada', sans-serif;
 }
+#backgroundPhoto{
+  width: 100%;
+  height: 50%;
+}
+#renterPhoto{
+  width: 100%;
+  height: 50%;
+}
+
+#hostPhoto{
+  width: 100%;
+  height: 50%;
+}
+p{
+  font-family: 'Mada', sans-serif;
+  font-weight: 300 ;
+  line-height: 1.2em !important;
+}
+
 .renter {
   padding: 10px;
   margin-left:50px;
